@@ -95,7 +95,7 @@ def fmt(c):
 st.divider()
 desc = get_Wmo(cur["weathercode"])
 st.subheader("current Weather")
-st.metric("temperature",f"{fmt(cur['temperature_2m'])}'°'{unit}",f"Feels like{fmt(cur['apparent_temperature'])}'°'{unit}")
+st.metric("temperature",f"{fmt(cur['temperature_2m'])}°{unit}",f"Feels like{fmt(cur['apparent_temperature'])}'°'{unit}")
 col1,col2,col3,col4 = st.columns(4)
 col1.metric(":cloudy: Humidity", f"{cur['relative_humidity_2m']}%")
 col2.metric(":wind_blowing_face:Wind Speed",f"{cur['wind_speed_10m']}s {wind_direction(cur['wind_direction_10m'])}")
